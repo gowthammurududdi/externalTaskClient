@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "99751b02-d933-411e-96a5-b80ab498dfdf",
+		"name": "externalTaskClient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Process",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variables\":{\r\n        \"sla\":{\"value\":\"PT20H\", \"type\":\"String\"}\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUri}}/engine-rest/process-definition/key/{{processDefinitionKey}}/start",
+					"host": [
+						"{{baseUri}}"
+					],
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"key",
+						"{{processDefinitionKey}}",
+						"start"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
