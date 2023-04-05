@@ -8,7 +8,7 @@ In resources
 Process External Task Topic and Run Configurations Topic should be Same 
 
 This External Task Worker Expects an input from the process in following format 
-## Tutorial
+```JSON
 
 {
     "variables":{
@@ -16,9 +16,9 @@ This External Task Worker Expects an input from the process in following format
 
     }
 }
-
+```
 and the output will be four variables and similar to following 
-## Tutorial
+```JSON
 
 {
     "processedOn": "Wed Apr 05 00:31:26 CDT 2023",
@@ -26,6 +26,7 @@ and the output will be four variables and similar to following
     "minutesOfSla": "1200",
     "processedBy": "shippingtaskworkerOne"
 }
+```
 
 This worker is simply calculating the Due Date with the Given SLA in time
 
